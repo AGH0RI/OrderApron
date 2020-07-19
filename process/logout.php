@@ -1,0 +1,10 @@
+<?php 
+session_start();
+if(isset($_SESSION['userdata']))
+unset($_SESSION['userdata']);
+if(isset($_SESSION['admindata']))
+unset($_SESSION['admindata']);
+if(isset($_GET['msg']))
+    unset($_SESSION['dat']);
+header("location:../");
+ ?>
